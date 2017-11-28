@@ -8,7 +8,7 @@ Public Class Form2
     Public Const WM_NCLBUTTONDOWN As Integer = &HA1
     Public Const HTCAPTION As Integer = &H2
 
-    Dim playfulladdr As New ArrayList()
+    Public playfulladdr As New ArrayList()
     <Runtime.InteropServices.DllImport("User32.dll")>
     Public Shared Function ReleaseCapture() As Boolean
     End Function
@@ -70,6 +70,7 @@ Public Class Form2
             End If
             AxWindowsMediaPlayer1.Ctlcontrols.play()
         End If
+        MsgBox("PlayDest " & playfulladdr.Item(ListBox1.SelectedIndex))
 
     End Sub
 
