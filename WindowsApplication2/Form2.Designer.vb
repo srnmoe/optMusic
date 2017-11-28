@@ -45,7 +45,7 @@ Partial Class Form2
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.Panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Button1)
@@ -57,14 +57,14 @@ Partial Class Form2
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("맑은 고딕", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(12, 3)
+        Me.Label1.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Label1.Font = New System.Drawing.Font("굴림", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label1.Location = New System.Drawing.Point(265, 7)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(164, 25)
+        Me.Label1.Size = New System.Drawing.Size(139, 12)
         Me.Label1.TabIndex = 2
-        Me.Label1.Text = "GGo.MusicPlayer"
+        Me.Label1.Text = "Opt-Music_Player.Main"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Button2
@@ -72,7 +72,7 @@ Partial Class Form2
         Me.Button2.BackgroundImage = CType(resources.GetObject("Button2.BackgroundImage"), System.Drawing.Image)
         Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.Button2.Location = New System.Drawing.Point(463, 3)
+        Me.Button2.Location = New System.Drawing.Point(604, 2)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(37, 23)
         Me.Button2.TabIndex = 1
@@ -82,7 +82,7 @@ Partial Class Form2
         '
         Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
         Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.Button1.Location = New System.Drawing.Point(506, 3)
+        Me.Button1.Location = New System.Drawing.Point(647, 2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(35, 23)
         Me.Button1.TabIndex = 0
@@ -109,7 +109,7 @@ Partial Class Form2
         '
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("맑은 고딕", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
-        Me.Button3.Location = New System.Drawing.Point(279, 35)
+        Me.Button3.Location = New System.Drawing.Point(597, 82)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 27)
         Me.Button3.TabIndex = 2
@@ -120,7 +120,7 @@ Partial Class Form2
         '
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.Font = New System.Drawing.Font("맑은 고딕", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
-        Me.Button4.Location = New System.Drawing.Point(279, 115)
+        Me.Button4.Location = New System.Drawing.Point(597, 148)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 27)
         Me.Button4.TabIndex = 3
@@ -131,7 +131,7 @@ Partial Class Form2
         '
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Font = New System.Drawing.Font("맑은 고딕", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
-        Me.Button5.Location = New System.Drawing.Point(279, 75)
+        Me.Button5.Location = New System.Drawing.Point(597, 115)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(75, 27)
         Me.Button5.TabIndex = 4
@@ -142,7 +142,8 @@ Partial Class Form2
         '
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button6.Font = New System.Drawing.Font("맑은 고딕", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
-        Me.Button6.Location = New System.Drawing.Point(370, 35)
+        Me.Button6.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.Button6.Location = New System.Drawing.Point(597, 49)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(75, 27)
         Me.Button6.TabIndex = 5
@@ -153,7 +154,7 @@ Partial Class Form2
         '
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button7.Font = New System.Drawing.Font("맑은 고딕", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
-        Me.Button7.Location = New System.Drawing.Point(279, 156)
+        Me.Button7.Location = New System.Drawing.Point(597, 181)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(75, 27)
         Me.Button7.TabIndex = 6
@@ -175,7 +176,7 @@ Partial Class Form2
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label2.Location = New System.Drawing.Point(264, 395)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(30, 16)
+        Me.Label2.Size = New System.Drawing.Size(40, 16)
         Me.Label2.TabIndex = 8
         Me.Label2.Text = "볼륨"
         '
@@ -193,7 +194,7 @@ Partial Class Form2
         '
         Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button8.Font = New System.Drawing.Font("맑은 고딕", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
-        Me.Button8.Location = New System.Drawing.Point(279, 240)
+        Me.Button8.Location = New System.Drawing.Point(597, 247)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(75, 27)
         Me.Button8.TabIndex = 10
@@ -204,7 +205,7 @@ Partial Class Form2
         '
         Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button9.Font = New System.Drawing.Font("맑은 고딕", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
-        Me.Button9.Location = New System.Drawing.Point(279, 198)
+        Me.Button9.Location = New System.Drawing.Point(597, 214)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(75, 27)
         Me.Button9.TabIndex = 11
@@ -215,8 +216,8 @@ Partial Class Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 11.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.GrayText
-        Me.ClientSize = New System.Drawing.Size(550, 424)
+        Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.ClientSize = New System.Drawing.Size(684, 810)
         Me.Controls.Add(Me.Button9)
         Me.Controls.Add(Me.Button8)
         Me.Controls.Add(Me.AxWindowsMediaPlayer1)
