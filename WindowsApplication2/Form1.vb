@@ -25,6 +25,7 @@ Public Class Form1
             If (reply = "1") Then
                 If MsgBox("로그인 정보 확인 완료!" + vbCrLf + "[로그인 하시겠습니까?]", MsgBoxStyle.YesNo, "Login") = vbYes Then
                     Me.Hide()
+                    My.Computer.Audio.Stop()
                     Form2.Show()
                 End If
             Else
@@ -88,5 +89,30 @@ Public Class Form1
             SendMessage(Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0)
 
         End If
+    End Sub
+    Private Sub Label3_MouseDown(sender As Object, e As MouseEventArgs) Handles Label3.MouseDown
+        If (e.Button = MouseButtons.Left) Then
+            ReleaseCapture()
+            SendMessage(Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0)
+        End If
+    End Sub
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
+    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+        Form5.Show()
+    End Sub
+
+    Private Sub Label4_MouseEnter(sender As Object, e As EventArgs) Handles Label4.MouseEnter
+        Label4.ForeColor = Color.Black
+    End Sub
+
+    Private Sub Label4_MouseLeave(sender As Object, e As EventArgs) Handles Label4.MouseLeave
+        Label4.ForeColor = Color.DarkGray
     End Sub
 End Class
