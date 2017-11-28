@@ -27,9 +27,10 @@ Partial Class Form3
         '
         'WebBrowser1
         '
-        Me.WebBrowser1.Location = New System.Drawing.Point(85, 61)
+        Me.WebBrowser1.Location = New System.Drawing.Point(28, 30)
         Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowser1.Name = "WebBrowser1"
+        Me.WebBrowser1.ScrollBarsEnabled = False
         Me.WebBrowser1.Size = New System.Drawing.Size(464, 231)
         Me.WebBrowser1.TabIndex = 0
         Me.WebBrowser1.Url = New System.Uri("http://optmusic.oa.to/uploadDialog.php", System.UriKind.Absolute)
@@ -38,10 +39,12 @@ Partial Class Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(707, 336)
+        Me.ClientSize = New System.Drawing.Size(526, 300)
         Me.Controls.Add(Me.WebBrowser1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
         Me.Name = "Form3"
-        Me.Text = "Form3"
+        Me.Text = "Music Uploader"
         Me.ResumeLayout(False)
 
     End Sub
