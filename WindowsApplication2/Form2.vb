@@ -70,7 +70,7 @@ Public Class Form2
             End If
             AxWindowsMediaPlayer1.Ctlcontrols.play()
         End If
-        MsgBox("PlayDest " & playfulladdr.Item(ListBox1.SelectedIndex))
+        'MsgBox("PlayDest " & playfulladdr.Item(ListBox1.SelectedIndex))
 
     End Sub
 
