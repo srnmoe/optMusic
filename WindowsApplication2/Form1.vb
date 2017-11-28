@@ -20,17 +20,31 @@ Public Class Form1
 
         Dim client As WebClient = New WebClient()
         Try
-
-            Dim reply As String = client.DownloadString("http://optmusic.oa.to/login.php?username=" & TextBox1.Text & "&password=" & TextBox2.Text)
-            If (reply = "1") Then
-                If MsgBox("로그인 정보 확인 완료!" + vbCrLf + "[로그인 하시겠습니까?]", MsgBoxStyle.YesNo, "Login") = vbYes Then
-                    Me.Hide()
-                    My.Computer.Audio.Stop()
-                    Form2.Show()
-                End If
+            If TextBox1.Text = ("") Or TextBox2.Text = ("") Then '알아서 해석
+                MsgBox("공백은 지원하지 않습니다.", MsgBoxStyle.Information, "로그인 오류!")
             Else
-                MsgBox("로그인 정보가 일치하지 않습니다." & reply, MsgBoxStyle.Information, "로그인 오류!")
+                Dim reply As String = client.DownloadString("http://optmusic.oa.to/login.php?username=" & TextBox1.Text & "&password=" & TextBox2.Text)
+                If (reply = "1") Then
+                    If MsgBox("로그인 정보 확인 완료!" + vbCrLf + "[로그인 하시겠습니까?]", MsgBoxStyle.YesNo, "Login") = vbYes Then
+                        Me.Hide()
+                        My.Computer.Audio.Stop()
+                        Form2.Show()
+                    End If
+                Else
+                    MsgBox("로그인 정보가 일치하지 않습니다." & reply, MsgBoxStyle.Information, "로그인 오류!")
+                End If
             End If
+            'Else
+            'Dim reply As String = client.DownloadString("http://optmusic.oa.to/login.php?username=" & TextBox1.Text & "&password=" & TextBox2.Text)
+            'If (reply = "1") Then
+            ' If MsgBox("로그인 정보 확인 완료!" + vbCrLf + "[로그인 하시겠습니까?]", MsgBoxStyle.YesNo, "Login") = vbYes Then
+            'Me.Hide()
+            'My.Computer.Audio.Stop()
+            'Form2.Show()
+            'End If
+            'Else
+            'MsgBox("로그인 정보가 일치하지 않습니다." & reply, MsgBoxStyle.Information, "로그인 오류!")
+            'End If
         Catch ex As Exception
             MsgBox("서버에 연결할 수 없습니다. " & ex.Message)
         End Try

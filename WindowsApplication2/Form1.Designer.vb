@@ -137,12 +137,13 @@ Partial Class Form1
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(602, 49)
+        Me.Button3.Location = New System.Drawing.Point(12, 38)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(110, 37)
+        Me.Button3.Size = New System.Drawing.Size(54, 21)
         Me.Button3.TabIndex = 7
         Me.Button3.Text = "회원가입"
         Me.Button3.UseVisualStyleBackColor = True
+        Me.Button3.Visible = False
         '
         'Label4
         '
