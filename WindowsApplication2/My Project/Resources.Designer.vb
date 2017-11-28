@@ -22,7 +22,7 @@ Namespace My.Resources
     '''<summary>
     '''  지역화된 문자열 등을 찾기 위한 강력한 형식의 리소스 클래스입니다.
     '''</summary>
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0"),  _
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0"),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
      Global.Microsoft.VisualBasic.HideModuleNameAttribute()>  _
@@ -58,6 +58,15 @@ Namespace My.Resources
             Set
                 resourceCulture = value
             End Set
+        End Property
+        
+        '''<summary>
+        '''  System.IO.MemoryStream과(와) 유사한 System.IO.UnmanagedMemoryStream 형식의 지역화된 리소스를 찾습니다.
+        '''</summary>
+        Friend ReadOnly Property no_game() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("no_game", resourceCulture)
+            End Get
         End Property
     End Module
 End Namespace
