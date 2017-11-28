@@ -39,7 +39,7 @@ Public Class Form4
         If (ListBox1.SelectedItem = "") Then
         Else
 
-            Form2.ListBox1.Items.Add(ListBox1.SelectedItem)
+            Form2.ListBox1.Items.Add("[CLOUD]" & ListBox1.SelectedItem)
             Form2.playfulladdr.Add(urls.Item(ListBox1.SelectedIndex))
             MsgBox("추가되었습니다.")
         End If
