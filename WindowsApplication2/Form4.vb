@@ -48,9 +48,10 @@ Public Class Form4
         If (ListBox1.SelectedItem = "") Then
         Else
             If (urls.Item(ListBox1.SelectedIndex).startsWith("yt://")) Then
-                Form6.Show()
-                Form6.WebKitBrowser1.Navigate("https://odg.youtube6download.top/cnvx.php?id=" & ListBox1.SelectedItem.ToString().Replace("yt://", ""))
-                Form6.Label3.Text = ListBox1.SelectedItem
+                Form7.Show()
+                Form7.WebBrowser1.Navigate("https://odg.youtube6download.top/cnvx.php?id=" & urls.Item(ListBox1.SelectedIndex).Replace("yt://", ""))
+                Form7.WebBrowser1.ScriptErrorsSuppressed = True
+                Form7.Label2.Text = ListBox1.SelectedItem
 
             Else
                 Form2.ListBox1.Items.Add("[CLOUD]" & ListBox1.SelectedItem)
