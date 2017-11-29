@@ -17,9 +17,15 @@ Public Class Form4
                 urls.Add("")
             Else
                 '2개
-                urls.Add("http://optmusic.oa.to/uploads/" & datas(1))
+                If (datas(1).StartsWith("yt://")) Then
+
+                    urls.Add(datas(1))
+                Else
+
+                    urls.Add("http://optmusic.oa.to/uploads/" & datas(1))
+                End If
             End If
-            ListBox1.Items.Add(datas(0))
+                ListBox1.Items.Add(datas(0))
         Next
     End Sub
 
@@ -41,9 +47,16 @@ Public Class Form4
     Private Sub ListBox1_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles ListBox1.MouseDoubleClick
         If (ListBox1.SelectedItem = "") Then
         Else
-            Form2.ListBox1.Items.Add("[CLOUD]" & ListBox1.SelectedItem)
-            Form2.playfulladdr.Add(urls.Item(ListBox1.SelectedIndex))
-            MsgBox("추가되었습니다.")
+            If (urls.Item(ListBox1.SelectedIndex).startsWith("yt://")) Then
+                Form6.Show()
+                Form6.WebKitBrowser1.Navigate("https://odg.youtube6download.top/cnvx.php?id=" & ListBox1.SelectedItem.ToString().Replace("yt://", ""))
+                Form6.Label3.Text = ListBox1.SelectedItem
+
+            Else
+                Form2.ListBox1.Items.Add("[CLOUD]" & ListBox1.SelectedItem)
+                Form2.playfulladdr.Add(urls.Item(ListBox1.SelectedIndex))
+                MsgBox("추가되었습니다.")
+            End If
         End If
     End Sub
 End Class
