@@ -37,14 +37,14 @@ Public Class Form2
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        OpenFileDialog1.Filter = "MP3 Files|*.mp3|Windows Media Audio Files|*.wma|Wave Files|*.wav"
+        OpenFileDialog1.Filter = "All Files|*.*|Mp3|*.mp3*|Wma|*.wma*|Mp4|*.mp4*|Wav|*.wav*|swf|*.swf*"
         If OpenFileDialog1.ShowDialog() Then
-            If (OpenFileDialog1.SafeFileName.EndsWith("mp3")) Then
+            If (OpenFileDialog1.SafeFileName.EndsWith("mp3")) Or (OpenFileDialog1.SafeFileName.EndsWith("wma")) Or (OpenFileDialog1.SafeFileName.EndsWith("mp4")) Or (OpenFileDialog1.SafeFileName.EndsWith("wav")) Then
 
                 ListBox1.Items.Add(OpenFileDialog1.SafeFileName)
                 playfulladdr.Add(OpenFileDialog1.FileName)
             Else
-                MsgBox("mp3파일이 아닙니다.")
+                MsgBox("지원하지 않는 형식의 파일입니다.")
             End If
 
         End If
@@ -87,6 +87,14 @@ Public Class Form2
     End Sub
 
     Private Sub Panel1_MouseDown(sender As Object, e As MouseEventArgs) Handles Panel1.MouseDown
+        If (e.Button = MouseButtons.Left) Then
+            ReleaseCapture()
+            SendMessage(Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0)
+
+        End If
+    End Sub
+
+    Private Sub Label1_MouseDown(sender As Object, e As MouseEventArgs) Handles Label1.MouseDown
         If (e.Button = MouseButtons.Left) Then
             ReleaseCapture()
             SendMessage(Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0)
