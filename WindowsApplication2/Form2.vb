@@ -19,9 +19,7 @@ Public Class Form2
 
 
 
-    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        HScrollBar1.Value = 50
-    End Sub
+
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
@@ -36,55 +34,17 @@ Public Class Form2
         WindowState = FormWindowState.Minimized
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        OpenFileDialog1.Filter = "All Files|*.*|Mp3|*.mp3*|Wma|*.wma*|Mp4|*.mp4*|Wav|*.wav*|swf|*.swf*"
-        If OpenFileDialog1.ShowDialog() Then
-            If (OpenFileDialog1.SafeFileName.EndsWith("mp3")) Or (OpenFileDialog1.SafeFileName.EndsWith("wma")) Or (OpenFileDialog1.SafeFileName.EndsWith("mp4")) Or (OpenFileDialog1.SafeFileName.EndsWith("wav")) Then
 
-                ListBox1.Items.Add(OpenFileDialog1.SafeFileName)
-                playfulladdr.Add(OpenFileDialog1.FileName)
-            Else
-                MsgBox("지원하지 않는 형식의 파일입니다.")
-            End If
 
-        End If
 
-    End Sub
 
-    Private Sub HScrollBar1_Scroll(sender As Object, e As ScrollEventArgs) Handles HScrollBar1.Scroll
-        AxWindowsMediaPlayer1.settings.volume = HScrollBar1.Value
-    End Sub
-
-    Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
+    Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
         'AxWindowsMediaPlayer1.URL = ""
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        If (ListBox1.SelectedIndex = -1) Then
-            MsgBox("선택된 항목이 없습니다.")
-        Else
-            If AxWindowsMediaPlayer1.URL = playfulladdr.Item(ListBox1.SelectedIndex) Then
-            Else
 
-                AxWindowsMediaPlayer1.URL = playfulladdr.Item(ListBox1.SelectedIndex)
-            End If
-            AxWindowsMediaPlayer1.Ctlcontrols.play()
-        End If
-        'MsgBox("PlayDest " & playfulladdr.Item(ListBox1.SelectedIndex))
 
-    End Sub
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        ' ListBox1.SelectedItems.Clear() 선택된 하나만 삭제되도록 하기
-        If (ListBox1.SelectedIndex = -1) Then
-            MsgBox("지울 항목이 없습니다.")
-        Else
-
-            playfulladdr.RemoveAt(ListBox1.SelectedIndex)
-            ListBox1.Items.Remove(ListBox1.SelectedItem)
-        End If
-
-    End Sub
 
     Private Sub Panel1_MouseDown(sender As Object, e As MouseEventArgs) Handles Panel1.MouseDown
         If (e.Button = MouseButtons.Left) Then
@@ -118,9 +78,22 @@ Public Class Form2
         Form4.Show()
     End Sub
 
-    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+    Private Sub Button10_Click(sender As Object, e As EventArgs)
         Form6.Show()
     End Sub
+
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+        Form6.Show()
+    End Sub
+
+    Private Sub Button11_MouseEnter(sender As Object, e As EventArgs) Handles Button11.MouseEnter
+        Button11.BackColor = Color.LightCyan
+    End Sub
+
+    Private Sub Button11_MouseLeave(sender As Object, e As EventArgs) Handles Button11.MouseLeave
+        Button11.BackColor = Color.White
+    End Sub
 End Class
+
 
 

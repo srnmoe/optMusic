@@ -25,21 +25,17 @@ Partial Class Form2
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form2))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
-        Me.HScrollBar1 = New System.Windows.Forms.HScrollBar()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.AxWindowsMediaPlayer1 = New AxWMPLib.AxWindowsMediaPlayer()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Button9 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button10 = New System.Windows.Forms.Button()
+        Me.Button11 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -61,46 +57,44 @@ Partial Class Form2
         Me.Label1.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Label1.Font = New System.Drawing.Font("굴림", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label1.Location = New System.Drawing.Point(265, 7)
+        Me.Label1.Location = New System.Drawing.Point(253, 7)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(139, 12)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Opt-Music_Player.Main"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
+        'Button2
+        '
+        Me.Button2.BackgroundImage = CType(resources.GetObject("Button2.BackgroundImage"), System.Drawing.Image)
+        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.Button2.Location = New System.Drawing.Point(604, 2)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(37, 23)
+        Me.Button2.TabIndex = 1
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Button1.Location = New System.Drawing.Point(647, 2)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(35, 23)
+        Me.Button1.TabIndex = 0
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         Me.OpenFileDialog1.Filter = "All Files|*.*|Mp3|*.mp3*|Wma|*.wma*"
         '
-        'ListBox1
-        '
-        Me.ListBox1.BackColor = System.Drawing.SystemColors.WindowFrame
-        Me.ListBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ListBox1.Font = New System.Drawing.Font("돋움체", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 15
-        Me.ListBox1.Location = New System.Drawing.Point(12, 35)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(246, 377)
-        Me.ListBox1.TabIndex = 1
-        '
-        'Button3
-        '
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("맑은 고딕", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
-        Me.Button3.Location = New System.Drawing.Point(597, 82)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 27)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "불러오기"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
         'Button4
         '
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.Font = New System.Drawing.Font("맑은 고딕", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
-        Me.Button4.Location = New System.Drawing.Point(597, 148)
+        Me.Button4.Location = New System.Drawing.Point(596, 350)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 27)
         Me.Button4.TabIndex = 3
@@ -111,43 +105,23 @@ Partial Class Form2
         '
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Font = New System.Drawing.Font("맑은 고딕", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
-        Me.Button5.Location = New System.Drawing.Point(597, 115)
+        Me.Button5.Location = New System.Drawing.Point(597, 317)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(75, 27)
         Me.Button5.TabIndex = 4
         Me.Button5.Text = "Play"
         Me.Button5.UseVisualStyleBackColor = True
         '
-        'Button6
-        '
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.Font = New System.Drawing.Font("맑은 고딕", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
-        Me.Button6.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Button6.Location = New System.Drawing.Point(597, 49)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(75, 27)
-        Me.Button6.TabIndex = 5
-        Me.Button6.Text = "Clear Playlist"
-        Me.Button6.UseVisualStyleBackColor = True
-        '
         'Button7
         '
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button7.Font = New System.Drawing.Font("맑은 고딕", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
-        Me.Button7.Location = New System.Drawing.Point(597, 181)
+        Me.Button7.Location = New System.Drawing.Point(597, 284)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(75, 27)
         Me.Button7.TabIndex = 6
         Me.Button7.Text = "Pause"
         Me.Button7.UseVisualStyleBackColor = True
-        '
-        'HScrollBar1
-        '
-        Me.HScrollBar1.LargeChange = 5
-        Me.HScrollBar1.Location = New System.Drawing.Point(311, 395)
-        Me.HScrollBar1.Name = "HScrollBar1"
-        Me.HScrollBar1.Size = New System.Drawing.Size(207, 17)
-        Me.HScrollBar1.TabIndex = 7
         '
         'Label2
         '
@@ -174,7 +148,7 @@ Partial Class Form2
         '
         Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button8.Font = New System.Drawing.Font("맑은 고딕", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
-        Me.Button8.Location = New System.Drawing.Point(597, 247)
+        Me.Button8.Location = New System.Drawing.Point(596, 218)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(75, 27)
         Me.Button8.TabIndex = 10
@@ -185,42 +159,23 @@ Partial Class Form2
         '
         Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button9.Font = New System.Drawing.Font("맑은 고딕", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
-        Me.Button9.Location = New System.Drawing.Point(597, 214)
+        Me.Button9.Location = New System.Drawing.Point(596, 251)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(75, 27)
         Me.Button9.TabIndex = 11
         Me.Button9.Text = "Search"
         Me.Button9.UseVisualStyleBackColor = True
         '
-        'Button2
+        'Button11
         '
-        Me.Button2.BackgroundImage = CType(resources.GetObject("Button2.BackgroundImage"), System.Drawing.Image)
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.Button2.Location = New System.Drawing.Point(604, 2)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(37, 23)
-        Me.Button2.TabIndex = 1
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.Button1.Location = New System.Drawing.Point(647, 2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(35, 23)
-        Me.Button1.TabIndex = 0
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button10
-        '
-        Me.Button10.Location = New System.Drawing.Point(347, 217)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(75, 23)
-        Me.Button10.TabIndex = 12
-        Me.Button10.Text = "Button10"
-        Me.Button10.UseVisualStyleBackColor = True
+        Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button11.Font = New System.Drawing.Font("맑은 고딕", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
+        Me.Button11.Location = New System.Drawing.Point(463, 51)
+        Me.Button11.Name = "Button11"
+        Me.Button11.Size = New System.Drawing.Size(208, 37)
+        Me.Button11.TabIndex = 13
+        Me.Button11.Text = "My Album (내 앨범)"
+        Me.Button11.UseVisualStyleBackColor = True
         '
         'Form2
         '
@@ -228,18 +183,14 @@ Partial Class Form2
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(684, 810)
-        Me.Controls.Add(Me.Button10)
+        Me.Controls.Add(Me.Button11)
         Me.Controls.Add(Me.Button9)
         Me.Controls.Add(Me.Button8)
         Me.Controls.Add(Me.AxWindowsMediaPlayer1)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.HScrollBar1)
         Me.Controls.Add(Me.Button7)
-        Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("굴림", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -258,16 +209,12 @@ Partial Class Form2
     Friend WithEvents Button1 As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
-    Friend WithEvents ListBox1 As ListBox
-    Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
     Friend WithEvents Button7 As Button
-    Friend WithEvents HScrollBar1 As HScrollBar
     Friend WithEvents Label2 As Label
     Friend WithEvents AxWindowsMediaPlayer1 As AxWMPLib.AxWindowsMediaPlayer
     Friend WithEvents Button8 As Button
     Friend WithEvents Button9 As Button
-    Friend WithEvents Button10 As Button
+    Friend WithEvents Button11 As Button
 End Class
